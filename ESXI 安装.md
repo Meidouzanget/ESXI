@@ -10,7 +10,7 @@ https://my.vmware.com/group/vmware/evalcenter?p=vsphere-eval-7
 
 ##### 建议下载6.7以前的版本，根据国内外大佬所述，7.0版本移除了对 REALTEK 瑞昱网卡（蓝色的螃蟹图标）的支持，安装时会报错 No Network Adapters
 
-笔者安装使用的网卡是Realtek PCIe GBE Family Controller，主板自带的螃蟹网卡
+笔者安装使用的网卡是Realtek PCIe GBE Family Controller，主板自带的螃蟹网卡。可进入PE，在 此电脑》属性》设备管理器 中查看
 
 如果拥有独立网卡，或Intel网卡，装7.0版本那应该没有问题。如有问题，请见 打包驱动 章节。
 
@@ -18,7 +18,8 @@ https://www.xzccc.com/blog/wangluocunchu/85.html
 
 https://www.reddit.com/r/vmware/comments/igkd62/how_to_make_a_bootable_esxi_7_stick_with_network/
 
-图片mgfdas
+![1070034-20180922144921273-1253551996](https://user-images.githubusercontent.com/59044398/117921417-481cb400-b323-11eb-951b-4cb10d9e16c2.png)
+
 
 
 
@@ -26,14 +27,17 @@ https://www.reddit.com/r/vmware/comments/igkd62/how_to_make_a_bootable_esxi_7_st
 
 使用Rufus对U盘进行刻录 
 
-图片
+![捕获44](https://user-images.githubusercontent.com/59044398/117921515-6edaea80-b323-11eb-96f6-cdde54aff37e.PNG)
 
-询问更新 点击 否
 
+询问更新 一定要点 否 不然会出问题
+
+![156](https://user-images.githubusercontent.com/59044398/117921743-d729cc00-b323-11eb-9d28-714657e67075.PNG)
 
 
 会删除全部数据 点击是
 
+![56+](https://user-images.githubusercontent.com/59044398/117921746-dabd5300-b323-11eb-87a5-8185bd6fce64.PNG)
 
 
 完成后，把U盘插上要安装的电脑，启动。
