@@ -65,17 +65,13 @@ https://vibsdepot.v-front.de/tools/ESXi-Customizer-v2.7.2.exe
 ESXi-Customizer下载完成后，双击打开会自动解压出来得到以下文件：
 
 
-
-图片sdfghjkjhgfddfg
-
+![捕获dtfgdf](https://user-images.githubusercontent.com/59044398/117929570-8cae4c80-b32f-11eb-95d8-10e8c477622b.PNG)
 
 
 后缀名为 `.cmd` 的就是启动文件，是一个脚本，默认情况下这个脚本是只能支持的win8.1，win10用户打开会报错：
 
 
-
-图片fgjkl'
-
+![PIC20180902_144756](https://user-images.githubusercontent.com/59044398/117929607-98017800-b32f-11eb-9b46-3a2b559b20b5.png)
 
 
 这个时候我们用文本编辑器编辑一下ESXi-Customizer.cmd文件
@@ -86,13 +82,12 @@ ESXi-Customizer下载完成后，双击打开会自动解压出来得到以下�
 set WinVer=6.3
 ```
 
+![PIC20180902_184300](https://user-images.githubusercontent.com/59044398/117929741-b9fafa80-b32f-11eb-85ef-b22d2104a523.png)
 
-
-图片ghjklghjkl
-
-
+![PIC20180902_184252](https://user-images.githubusercontent.com/59044398/117929729-b798a080-b32f-11eb-8482-84b69c8978fe.png)
 
 然后重新运行ESXi-Customizer.cmd文件
+教程来源：https://6iit.com/3299
 
 #### 寻找驱动
 
