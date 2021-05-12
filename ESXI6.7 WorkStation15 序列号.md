@@ -1,0 +1,7 @@
+# ESXI
+
+VMware vSphere 6 Enterprise Plus
+0A65P-00HD0-3Z5M1-M097M-22P7H
+
+VMware Workstation 15永久激活密钥,激活序列号
+CG392-4PX5J-H816Z-HYZNG-PQRG2
