@@ -139,6 +139,9 @@ http://down.whsir.com/downloads/ESXi-Customizer-PS-v2.6.0.ps1
 
 解决办法：开始-所有程序-附件-Windows PowerShell（管理员身份运行），输入
 
+```bash
+Set-ExecutionPolicy Unrestricted
+```
 
 ![PowerCLi11](https://user-images.githubusercontent.com/59044398/117939490-adc86a80-b33a-11eb-9548-fdf276b4b7cb.png)
 
