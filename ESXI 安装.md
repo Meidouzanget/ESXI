@@ -113,6 +113,80 @@ https://vibsdepot.v-front.de/wiki/index.php/List_of_currently_available_ESXi_pac
 
 ### 方法二
 
+#### 在线版
+
+针对6.7以上版本，使用VMware-PowerCLi进行封包
+
+1、先下载VMware-PowerCLI-6.5.0和ESXi-Customizer-PS：
+
+http://down.whsir.com/downloads/VMware-PowerCLI-6.5.0-4624819.exe
+
+http://down.whsir.com/downloads/ESXi-Customizer-PS-v2.6.0.ps1
+
+
+
+2.安装VMware-PowerCLI-6.5.0
+
+
+
+
+
+3.安装完成后电脑桌面会生成一个VMware PowerCLI，运行后如果看到以下报错
+
+
+
+解决办法：开始-所有程序-附件-Windows PowerShell（管理员身份运行），输入
+
+
+
+然后重新启动VMware PowerCLI会有个默认的设置，直接回车即可，第二次启动后可以看到如下画面，此时VMware PowerCLI安装完成
+
+
+
+
+
+5、我这里ESXi-Customizer-PS-v2.6.0.ps1放在了G盘，这里需要切换下盘符，然后执行
+
+```bash
+.\ESXi-Customizer-PS-v2.6.0.ps1 -v67 -vft -load net55-r8168
+```
+
+注意：其中-v67是表示ESXI版本是6.7，如果是ESXI6.5版本则-v65，net55-r8168表示对应的RTL8168网卡驱动，如果当前电脑有杀毒软件则可能弹出窗口，允许运行即可。我这里生成的ESXI6.7.iso镜像会在g盘根下，即当前目录。
+
+
+
+7、如果一切正常，则看到如下页面
+
+
+
+最后看到All done则表示封包完成，将镜像写入U盘，重新在物理机使用U盘安装即可
+
+PS.因为笔者尝试了两次在线版，第一次失败：
+
+
+
+第二次上网搜索，根据网友的解决方法，输入一下代码再试一次，失败，只好用离线版：
+
+```bash
+$DeployNoSignatureCheck=$true
+```
+
+
+
+
+
+
+
+
+
+#### 离线版
+
+
+
+
+
+
+
 ![捕获](https://user-images.githubusercontent.com/59044398/117919094-fa05b180-b31e-11eb-9f19-b2a6279f1d00.PNG)
 
 
