@@ -1,12 +1,20 @@
 # ESXI
 
+## 从WorkStation中迁移虚拟机
+
+##### 首先这是一个失败的过程记录
+
 笔者并不建议这么做，因为会经历一系列的问题
 
 依顺序会经历一下流程：导入失败，无法开机，无法修改配置，开机蓝屏，镜像修复，漫长等待，修复失败
 
 笔者实在没精力花几个小时逐个方法尝试导入了，毕竟重装系统加软件也不过一个小时的工作
 
-基本方法：
+##### 如果你有成功的方法，不妨我联系
+
+
+
+### 基本方法：
 
 1、先在Vmware workstation工作站上导出虚拟机为vof文件
 
@@ -31,10 +39,9 @@
 
 ![1219693-20210105211928268-1648511727](https://user-images.githubusercontent.com/59044398/117949950-3f3cda00-b345-11eb-8db1-e8b3cfb1de4f.png)
 
+### 问题
 
-问题
-
-导入失败
+#### 导入失败
 
 因为导出的配置文件的版本太高
 
@@ -49,36 +56,43 @@
 ![捕获7891](https://user-images.githubusercontent.com/59044398/117951579-e1a98d00-b346-11eb-8cff-a0ae8d8909c5.PNG)
 
 
-打开与改修虚拟机失败
+
+#### 打开与改修虚拟机失败
 
 重启ESXI即可
 
-打开蓝屏
+
+
+#### 打开蓝屏
 
 ![1586](https://user-images.githubusercontent.com/59044398/117955116-46b2b200-b34a-11eb-9347-42f1b5bb3154.PNG)
 
 
-镜像修复
+
+#### 镜像修复
 
 导入镜像
 
 ![41548654](https://user-images.githubusercontent.com/59044398/117955060-3995c300-b34a-11eb-8126-49d50a6bf6ea.PNG)
 
 
-启动
+
+启动，按ESC
 ![1586](https://user-images.githubusercontent.com/59044398/117953774-f1c26c00-b348-11eb-97dd-a14b4fe3645c.PNG)
 
-按ESC
-![156456](https://user-images.githubusercontent.com/59044398/117953830-0141b500-b349-11eb-9ca2-10dafcb8e928.PNG)
+
 
 选第三个回车，然后一直按任意键
 
-![569+8](https://user-images.githubusercontent.com/59044398/117954004-2d5d3600-b349-11eb-9669-076ce3975b4d.PNG)
+![156456](https://user-images.githubusercontent.com/59044398/117953830-0141b500-b349-11eb-9ca2-10dafcb8e928.PNG)
+
 
 
 安装界面选择修复系统
 
-![Uploading 569+8.PNG…]()
+![569+8](https://user-images.githubusercontent.com/59044398/117954004-2d5d3600-b349-11eb-9669-076ce3975b4d.PNG)
+
+
 
 
 进入疑难解答，高级选项，启动修复：失败
@@ -88,13 +102,13 @@
 ![56569](https://user-images.githubusercontent.com/59044398/117954179-58e02080-b349-11eb-8786-ac3ad08d189f.PNG)
 
 
+
 使用设备：没法进去，点击就是重启
 
 ![4158475](https://user-images.githubusercontent.com/59044398/117954715-df94fd80-b349-11eb-84bd-b191918bb1de.PNG)
 
 
 ![154544545](https://user-images.githubusercontent.com/59044398/117954738-e6bc0b80-b349-11eb-8bc1-10dab9cf210b.PNG)
-
 
 
 
