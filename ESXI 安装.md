@@ -100,15 +100,14 @@ https://vibsdepot.v-front.de/wiki/index.php/List_of_currently_available_ESXi_pac
 
 选择了 [net55-r8168](https://vibsdepot.v-front.de/wiki/index.php/Net55-r8168)，下载 vib格式
 
-图片52146324632563
-
+![捕获](https://user-images.githubusercontent.com/59044398/117930701-e6634680-b330-11eb-9680-7331de711156.PNG)
 
 
 #### 打包驱动
 
+下面的联网更新，不要打勾
 
-
-
+![1564](https://user-images.githubusercontent.com/59044398/117931375-b0729200-b331-11eb-99d4-bac4962cfa9a.PNG)
 
 
 
