@@ -10,13 +10,17 @@ https://my.vmware.com/group/vmware/evalcenter?p=vsphere-eval-7
 
 ##### 建议下载6.7以前的版本，根据国内外大佬所述，7.0版本移除了对 REALTEK 瑞昱网卡（蓝色的螃蟹图标）的支持，安装时会报错 No Network Adapters
 
-笔者安装使用的网卡是Realtek PCIe GBE Family Controller，主板自带的螃蟹网卡。可进入PE，在 此电脑》属性》设备管理器 中查看
-
-如果拥有独立网卡，或Intel网卡，装7.0版本那应该没有问题。如有问题，请见 打包驱动 章节。
-
 https://www.xzccc.com/blog/wangluocunchu/85.html
 
 https://www.reddit.com/r/vmware/comments/igkd62/how_to_make_a_bootable_esxi_7_stick_with_network/
+
+
+
+笔者安装使用的6.7镜像，网卡是Realtek PCIe GBE Family Controller，主板自带的螃蟹网卡。网卡版本可进入PE，在 此电脑》属性》设备管理器 中查看
+
+如果拥有独立网卡，或Intel网卡，装7.0版本那应该没有问题。如有问题，请见 打包驱动 章节。
+
+
 
 ![1070034-20180922144921273-1253551996](https://user-images.githubusercontent.com/59044398/117921417-481cb400-b323-11eb-951b-4cb10d9e16c2.png)
 
@@ -44,11 +48,75 @@ https://www.reddit.com/r/vmware/comments/igkd62/how_to_make_a_bootable_esxi_7_st
 
 ## 打包驱动
 
+如果报错 No Network Adapters，那就需要进行一下内容了，成功则跳过即可。
+
+由于笔者使用6.7版本的镜像，方法一显然失败了。不过方法一胜在简单，低版本的镜像使用还是挺好的
+
+### 方法一
+
+#### 安装软件
+
+适用于6.5之前的版本（不清楚6.5能不能用，工具官网说不支持6.0版本，但亲测能用）。此软件已不再更新，如不成功，请使用方法二
+
+使用ESXi-Customizer-v2.7.2软件
+
+https://vibsdepot.v-front.de/tools/ESXi-Customizer-v2.7.2.exe
+
+ESXi-Customizer下载完成后，双击打开会自动解压出来得到以下文件：
+
+
+
+图片sdfghjkjhgfddfg
+
+
+
+后缀名为 `.cmd` 的就是启动文件，是一个脚本，默认情况下这个脚本是只能支持的win8.1，win10用户打开会报错：
+
+
+
+图片fgjkl'
+
+
+
+这个时候我们用文本编辑器编辑一下ESXi-Customizer.cmd文件
+
+添加下图红框代码并保存
+
+```bash
+set WinVer=6.3
+```
+
+
+
+图片ghjklghjkl
+
+
+
+然后重新运行ESXi-Customizer.cmd文件
+
+#### 寻找驱动
+
+在此网站下载
+
+https://vibsdepot.v-front.de/wiki/index.php/List_of_currently_available_ESXi_packages
+
+根据两位网友的经验 [网友1](https://www.cnblogs.com/huhyoung/p/9690301.html )    [网友2](https://blog.csdn.net/JENREY/article/details/105774542 )
+
+选择了 [net55-r8168](https://vibsdepot.v-front.de/wiki/index.php/Net55-r8168)，下载 vib格式
+
+图片52146324632563
+
+
+
+#### 打包驱动
 
 
 
 
 
+
+
+### 方法二
 
 ![捕获](https://user-images.githubusercontent.com/59044398/117919094-fa05b180-b31e-11eb-9f19-b2a6279f1d00.PNG)
 
