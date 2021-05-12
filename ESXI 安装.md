@@ -113,9 +113,9 @@ https://vibsdepot.v-front.de/wiki/index.php/List_of_currently_available_ESXi_pac
 
 ### 方法二
 
-#### 在线版
-
 针对6.7以上版本，使用VMware-PowerCLi进行封包
+
+#### 在线版
 
 1、先下载VMware-PowerCLI-6.5.0和ESXi-Customizer-PS：
 
@@ -134,15 +134,19 @@ http://down.whsir.com/downloads/ESXi-Customizer-PS-v2.6.0.ps1
 3.安装完成后电脑桌面会生成一个VMware PowerCLI，运行后如果看到以下报错
 
 
+![PowerCLi14](https://user-images.githubusercontent.com/59044398/117939477-abfea700-b33a-11eb-96ab-46a1ccf3b127.png)
+
 
 解决办法：开始-所有程序-附件-Windows PowerShell（管理员身份运行），输入
 
+
+![PowerCLi11](https://user-images.githubusercontent.com/59044398/117939490-adc86a80-b33a-11eb-9548-fdf276b4b7cb.png)
 
 
 然后重新启动VMware PowerCLI会有个默认的设置，直接回车即可，第二次启动后可以看到如下画面，此时VMware PowerCLI安装完成
 
 
-
+![PowerCLi12](https://user-images.githubusercontent.com/59044398/117939525-b9b42c80-b33a-11eb-930c-a9a8d0a68351.png)
 
 
 5、我这里ESXi-Customizer-PS-v2.6.0.ps1放在了G盘，这里需要切换下盘符，然后执行
@@ -151,17 +155,24 @@ http://down.whsir.com/downloads/ESXi-Customizer-PS-v2.6.0.ps1
 .\ESXi-Customizer-PS-v2.6.0.ps1 -v67 -vft -load net55-r8168
 ```
 
+![PowerCLi13](https://user-images.githubusercontent.com/59044398/117939631-d6e8fb00-b33a-11eb-86d0-1aa96e7909be.png)
+
 注意：其中-v67是表示ESXI版本是6.7，如果是ESXI6.5版本则-v65，net55-r8168表示对应的RTL8168网卡驱动，如果当前电脑有杀毒软件则可能弹出窗口，允许运行即可。我这里生成的ESXI6.7.iso镜像会在g盘根下，即当前目录。
 
 
 
 7、如果一切正常，则看到如下页面
 
+![PowerCLi15](https://user-images.githubusercontent.com/59044398/117939410-9a1d0400-b33a-11eb-947f-ae37b989b7c4.png)
 
 
 最后看到All done则表示封包完成，将镜像写入U盘，重新在物理机使用U盘安装即可
 
 PS.因为笔者尝试了两次在线版，第一次失败：
+
+![捕获2](https://user-images.githubusercontent.com/59044398/117919104-fe31cf00-b31e-11eb-9792-1749ef6b2f0b.PNG)
+
+![4158156](https://user-images.githubusercontent.com/59044398/117941638-e5d0ad00-b33c-11eb-80db-bc92afb5bf56.PNG)
 
 
 
@@ -170,6 +181,8 @@ PS.因为笔者尝试了两次在线版，第一次失败：
 ```bash
 $DeployNoSignatureCheck=$true
 ```
+
+![输入代码失败2](https://user-images.githubusercontent.com/59044398/117939352-88d3f780-b33a-11eb-9fd0-91cafd8fdaa8.PNG)
 
 
 
@@ -181,36 +194,70 @@ $DeployNoSignatureCheck=$true
 
 #### 离线版
 
+在官网下载6.7镜像，选择zip版
+
+把ESXi-Customizer-PS-v2.6.0.ps1和ESXi670-201912001.zip放到c盘根目录下
+
+然后在p盘创建一个whsir文件夹，把net55-r8168-8.045a-napi.x86_64.vib放在p盘whsir文件夹内。
+
+输入代码：
+
+```bash
+ .\ESXi-Customizer-PS-v2.6.0.ps1 -izip .\ESXi670-201912001.zip -pkgDir p:\whsir\
+```
 
 
+注意：打包时会自动在c盘whsir文件夹内查找vib的驱动，生成的ESXI6.7.iso镜像会在c盘根下。
+
+如果一切正常，可看到以下内容
+
+![捕获](https://user-images.githubusercontent.com/59044398/117942746-fc2b3880-b33d-11eb-95ad-1ae59c657211.PNG)
 
 
+安装
+
+视频教程：
+https://www.youtube.com/watch?v=WSFW8iA7sfU
+
+把考录好的U盘插入电脑，Bios设置好U盘启动
+
+![15815](https://user-images.githubusercontent.com/59044398/117944173-8cb64880-b33f-11eb-9d59-8d7d4f5610eb.PNG)
+
+```bash
+输入 cdromBoot runweasel autoPartitionDSDataSize=8192
+```
+
+因为ESXI新特性换会占用硬盘一百多g，这些功能普通用户用不到所以视频中把大小限制在8g。
+
+由于不清楚是什么新特性，一来担心可能会对使用造成影响，二来一百多g也不算特别大的空间，所以笔者这里并没有做这一步
 
 
-![捕获](https://user-images.githubusercontent.com/59044398/117919094-fa05b180-b31e-11eb-9f19-b2a6279f1d00.PNG)
+![787897](https://user-images.githubusercontent.com/59044398/117945239-bae85800-b340-11eb-8cc3-ce22265e5973.PNG)
 
 
+选择安装硬盘
 
-![捕获2](https://user-images.githubusercontent.com/59044398/117919104-fe31cf00-b31e-11eb-9792-1749ef6b2f0b.PNG)
+![4548478](https://user-images.githubusercontent.com/59044398/117945105-92f8f480-b340-11eb-8b5a-72104e7e696d.PNG)
 
+选择键盘，默认美国英语
 
-
-![捕获3](https://user-images.githubusercontent.com/59044398/117919108-00942900-b31f-11eb-822e-ab69012a7739.PNG)
-
-
-
+![545845](https://user-images.githubusercontent.com/59044398/117945165-a4420100-b340-11eb-8f19-e68e403243a5.PNG)
 
 
-![捕获4](https://user-images.githubusercontent.com/59044398/117919119-0427b000-b31f-11eb-9810-744d951e4e24.PNG)
+输入root密码，需要大小写字母加数字，Abc123Abc，两边英文夹数字才能过
 
+![545845](https://user-images.githubusercontent.com/59044398/117945363-d5bacc80-b340-11eb-88aa-2fa623311f1b.PNG)
+
+设置完成后系统将会重启，重启后如下。也可以按F2输入刚才设置root账号，进行自定义设置
+
+
+![15688](https://user-images.githubusercontent.com/59044398/117947679-06036a80-b343-11eb-9a8b-33bf2d735e85.PNG)
+
+
+完成后在浏览器输入地址，，就可以看见登录页面
 
 
 ![捕获444](https://user-images.githubusercontent.com/59044398/117919129-0722a080-b31f-11eb-8d49-63f368633f70.PNG)
-
-
-
-
-
 
 
 
