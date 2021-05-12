@@ -105,7 +105,7 @@ https://vibsdepot.v-front.de/wiki/index.php/List_of_currently_available_ESXi_pac
 
 #### 打包驱动
 
-下面的联网更新，不要打勾
+下面的联网更新选项，不要打勾
 
 ![1564](https://user-images.githubusercontent.com/59044398/117931375-b0729200-b331-11eb-99d4-bac4962cfa9a.PNG)
 
