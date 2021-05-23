@@ -1,10 +1,13 @@
 # ESXI
 
-修改镜像
+## 修改镜像
+
+
 
 下载安装 OSFMount，打开
 
 ![捕获](https://user-images.githubusercontent.com/59044398/119276611-a9ab1f80-bc4d-11eb-9c0d-849c05458985.PNG)
+
 
 
 去掉ReadOnly，让镜像变得可以修改
@@ -12,15 +15,16 @@
 ![2](https://user-images.githubusercontent.com/59044398/119276617-b0399700-bc4d-11eb-937f-9a6ce4207601.PNG)
 
 
+
 此时电脑就会多出一个本地磁盘，打开它
 
 ![3](https://user-images.githubusercontent.com/59044398/119276633-c21b3a00-bc4d-11eb-9da9-e324f4ea6524.PNG)
 
 
+
 删除其他启动项，只留下ESXI
 
 ![7](https://user-images.githubusercontent.com/59044398/119276641-cf382900-bc4d-11eb-8aba-20493f645c36.PNG)
-
 
 
 
@@ -30,7 +34,9 @@
 
 如果需要洗白等操作，也要在刚才的grub.cfg中一并修改
 
-生成ESXI可用格式的镜像
+
+
+## 生成ESXI可用格式的镜像
 
 下载并安装StarWind
 
@@ -40,9 +46,13 @@
 
 ![捕获](https://user-images.githubusercontent.com/59044398/119276799-aa908100-bc4e-11eb-9df9-6c684d531905.PNG)
 
+
+
 选择ESXI Server image
 
 ![2](https://user-images.githubusercontent.com/59044398/119276806-b67c4300-bc4e-11eb-8e2b-306fb2318b68.PNG)
+
+
 
 后面的无需修改，下一步
 
@@ -52,24 +62,39 @@
 
 ![4](https://user-images.githubusercontent.com/59044398/119276859-065b0a00-bc4f-11eb-9d50-21e37635521a.PNG)
 
+## 创建虚拟机
 
-创建虚拟机
+
 
 选择创建新的虚拟机，注意版本选择
 
 ![5](https://user-images.githubusercontent.com/59044398/119276919-49b57880-bc4f-11eb-94cb-6022ba25309c.PNG)
 
+
+
 把没用的东西去掉，只留下这些
 
 ![6](https://user-images.githubusercontent.com/59044398/119276955-87b29c80-bc4f-11eb-99b7-7e8c593ba7f7.PNG)
+
+
 
 添加引导硬盘
 
 ![7](https://user-images.githubusercontent.com/59044398/119276980-a3b63e00-bc4f-11eb-82b3-db3fe5f08395.PNG)
 
+
+
+#### ps:如果遇到 行 25: 硬件系列“vmx-17”不受支持 的报错请见
+
+#### https://github.com/Meidouzanget/ESXI/blob/main/7.%20%E8%A1%8C%2025:%20%E7%A1%AC%E4%BB%B6%E7%B3%BB%E5%88%97%E2%80%9Cvmx-17%E2%80%9D%E4%B8%8D%E5%8F%97%E6%94%AF%E6%8C%81%20%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95.md
+
+
+
 创建目录
 
 ![8](https://user-images.githubusercontent.com/59044398/119276992-ba5c9500-bc4f-11eb-8922-bf7827a1040a.PNG)
+
+
 
 把文件上传到目录
 
@@ -78,16 +103,20 @@
 ![8](https://user-images.githubusercontent.com/59044398/119277023-dd874480-bc4f-11eb-83d6-23696737d774.PNG)
 
 
+
 检查一下硬盘的sata控制器是不是从（0，0）开始
 
 ![11](https://user-images.githubusercontent.com/59044398/119277116-5a1a2300-bc50-11eb-8900-fac0192d57e1.PNG)
+
+
 
 虚拟网卡一定要设为 E1000e
 
 ![10](https://user-images.githubusercontent.com/59044398/119277111-525a7e80-bc50-11eb-8409-ae04757009ae.PNG)
 
 
-无损迁移
+
+## 无损迁移
 
 全部设置完成，开机
 
@@ -95,12 +124,19 @@
 
 ![12](https://user-images.githubusercontent.com/59044398/119277162-951c5680-bc50-11eb-8d23-511bd0f4f727.PNG)
 
-能成功看见蓝色界面，就可以关机上硬盘了
+
+
+能成功看见蓝色界面，就可以关机，上硬盘了
 
 ![13](https://user-images.githubusercontent.com/59044398/119277187-c09f4100-bc50-11eb-9491-945e1ee19144.PNG)
 
-PS 上硬盘的步骤请见 《硬盘直通》
+
+
+#### PS 上硬盘的步骤请见 《硬盘直通》
+
 https://github.com/Meidouzanget/ESXI/blob/main/%E7%A1%AC%E7%9B%98%E7%9B%B4%E9%80%9A.md
+
+
 
 上好硬盘后，再次开机
 
@@ -109,7 +145,6 @@ https://github.com/Meidouzanget/ESXI/blob/main/%E7%A1%AC%E7%9B%98%E7%9B%B4%E9%80
 ![14](https://user-images.githubusercontent.com/59044398/119277315-7e2a3400-bc51-11eb-95a8-24c1ffa1818f.PNG)
 
 ![15](https://user-images.githubusercontent.com/59044398/119277326-871b0580-bc51-11eb-8aaf-47496eeedb67.PNG)
-
 
 
 
