@@ -99,7 +99,16 @@
 
 ![13](https://user-images.githubusercontent.com/59044398/119277187-c09f4100-bc50-11eb-9491-945e1ee19144.PNG)
 
+PS 上硬盘的步骤请见 《硬盘直通》
+https://github.com/Meidouzanget/ESXI/blob/main/%E7%A1%AC%E7%9B%98%E7%9B%B4%E9%80%9A.md
 
+上好硬盘后，再次开机
+
+还原，等待还原成功即可
+
+![14](https://user-images.githubusercontent.com/59044398/119277315-7e2a3400-bc51-11eb-95a8-24c1ffa1818f.PNG)
+
+![15](https://user-images.githubusercontent.com/59044398/119277326-871b0580-bc51-11eb-8aaf-47496eeedb67.PNG)
 
 
 
