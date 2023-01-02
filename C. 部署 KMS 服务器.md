@@ -25,7 +25,7 @@
 ![捕获5](https://user-images.githubusercontent.com/59044398/210225987-9ba79699-ec78-4ce0-92ea-a36688b34e7d.PNG)
 
 
-#### 3. 打开CMD输入命令激活
+### 3. 打开CMD输入命令激活
 
 slmgr -skms 192.168.1.xx  (替换成你自己的ipv4地址)
 
