@@ -2,7 +2,7 @@
 
 由于错误的删除了 DELL SupprotAssist，重新相同版本的会装不进去，只能卸载后再装
 
-DEL_bootbank_dcism_4.3.0.0.2781-DEL.700.0.0.15843807.vib(安装完后就是dcism)
+    DEL_bootbank_dcism_4.3.0.0.2781-DEL.700.0.0.15843807.vib(安装完后就是dcism)
 
 ### 卸载
 
