@@ -39,3 +39,10 @@ Windows 配置 VMXNET 发现无法联网
 ![image](https://user-images.githubusercontent.com/59044398/211324314-040356ff-0005-4d73-886f-11ec9e39c8ac.png)
 
 
+
+PS:参考
+
+https://docs.vmware.com/cn/VMware-vSphere/7.0/com.vmware.esxi.upgrade.doc/GUID-7FFEBD91-5D82-4E32-93AB-F10D8BFFECAA.html
+
+https://blog.51cto.com/u_11511126/2332809
+
