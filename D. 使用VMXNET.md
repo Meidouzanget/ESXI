@@ -36,6 +36,6 @@ Windows 配置 VMXNET 发现无法联网
 
 #### NAS Sata Raid 6 to NAS Sata
 
-![image](https://user-images.githubusercontent.com/59044398/211277532-ff3f8732-029b-431f-98da-adad059264f5.png)
+![image](https://user-images.githubusercontent.com/59044398/211324314-040356ff-0005-4d73-886f-11ec9e39c8ac.png)
 
 
