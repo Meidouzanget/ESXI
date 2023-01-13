@@ -98,7 +98,7 @@ d. 全部设置完成, Bulid the loader 开始编译
 
 ![image](https://user-images.githubusercontent.com/59044398/212335996-260d405c-b91b-41bb-8b55-5ce4508f58ca.png)
 
-等待编译完成会自动跳转,回车 Boot the loader 开机
+b. 等待编译完成会自动跳转,回车 Boot the loader 开机
 
 ![image](https://user-images.githubusercontent.com/59044398/212336130-3d068b11-ffa8-4cd3-9572-dd47376d13be.png)
 
