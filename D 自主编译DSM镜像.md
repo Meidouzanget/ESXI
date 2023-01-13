@@ -64,13 +64,13 @@
 
 #### 开始编译
 
-再次开机,选择编译机型
+m. 再次开机,选择编译机型
 
 ![image](https://user-images.githubusercontent.com/59044398/212332940-977629e4-9c07-4718-83d2-44d45ea050ed.png)
 
 ![image](https://user-images.githubusercontent.com/59044398/212333082-927f4923-121e-436a-a719-b6e62757e631.png)
 
-选择系统版本,因为DS3617xs只支持DSM7.0,
+n. 选择系统版本,因为DS3617xs只支持DSM7.0,
 
 ![image](https://user-images.githubusercontent.com/59044398/212333200-9eb6474d-ba11-4fc2-a153-5a7ed5df166d.png)
 
@@ -78,13 +78,13 @@
 
 ![image](https://user-images.githubusercontent.com/59044398/212333427-8f310b02-a2b7-46e2-9920-e0fa61f5234e.png)
 
-输入SN码洗白,如果你有,不填是默认自动生成
+s. 输入SN码洗白,如果你有,不填是默认自动生成
 
 ![image](https://user-images.githubusercontent.com/59044398/212333924-7449fa95-bd81-4244-8ccb-98a79e86d619.png)
 
-Addons是添加核显驱动,由于笔者使用的是EPYC 霄龙,没有核显跳过
+a. Addons是添加核显驱动,由于笔者使用的是EPYC 霄龙,没有核显跳过
  
-这里可以查看 SATA 端口,对于ESXI安装没有影响,可以随便看看
+x. 这里可以查看 SATA 端口,对于ESXI安装没有影响,可以随便看看
 
 ![image](https://user-images.githubusercontent.com/59044398/212334357-b521ecc2-a819-4027-a7a8-4bf9bfcf82e1.png)
 
@@ -92,7 +92,7 @@ Addons是添加核显驱动,由于笔者使用的是EPYC 霄龙,没有核显跳�
 
 ![image](https://user-images.githubusercontent.com/59044398/212335547-c324a1eb-3bab-4156-97c9-d256c4738a47.png)
 
-全部设置完成, Bulid the loader 开始编译
+d. 全部设置完成, Bulid the loader 开始编译
 
 ![image](https://user-images.githubusercontent.com/59044398/212335843-de672bf5-2fcd-446a-aec0-cd650a1ecaea.png)
 
