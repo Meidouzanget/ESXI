@@ -8,7 +8,33 @@
 
 ![捕获2](https://user-images.githubusercontent.com/59044398/210224437-4685a80b-4249-4419-98dd-3c90f0833fc8.PNG)
 
-把这个软盘文件复制出来，
+把floppy文件夹解压出来，用 VMware Workstation 打开 vmx 文件
+
+![image](https://user-images.githubusercontent.com/59044398/212466075-90608da4-715f-4938-bba4-b1bd2c7a8121.png)
+
+升级此虚拟机，找到现在用的esxi的版本，直接下一步完成
+
+![image](https://user-images.githubusercontent.com/59044398/212466034-248a6b4d-8655-4094-b063-46b582821983.png)
+
+![image](https://user-images.githubusercontent.com/59044398/212466064-7b3bb7e6-8ecf-410b-baff-cad6d36b25ce.png)
+
+导出为ovf
+
+![image](https://user-images.githubusercontent.com/59044398/212466203-247fd990-7852-4527-b8f3-f57a2db5e603.png)
+
+打开虚拟机，选择刚才的ovf，创建一台新的虚拟机
+
+![image](https://user-images.githubusercontent.com/59044398/212466246-1a60b8a5-cfc0-459a-b9dc-378a0cb51d96.png)
+
+现在，软盘已经做好了
+
+点击编辑虚拟机配置，打开软盘所在的路径上传到ESXI即可
+
+![image](https://user-images.githubusercontent.com/59044398/212466292-e8265341-2537-489f-a788-9b8ea89b5c22.png)
+
+
+
+##### 注意，如果直接把软盘复制出来而不经过兼容格式转换，会在ESXI里无法获取IPV4 
 
 ![捕获4](https://user-images.githubusercontent.com/59044398/210225066-f5be6178-4728-42fa-ba05-6d0a21248c8a.PNG)
 
