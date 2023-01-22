@@ -1,5 +1,7 @@
 # ESXI
 
+注意，已经建立好的KMS更换DHCP IP地址会导致无法启动，按照一下步骤重新做一个软盘即可
+
 ### 1. 下载工具
 地址： https://github.com/Wind4/vlmcsd
 
