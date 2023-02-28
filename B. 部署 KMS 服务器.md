@@ -64,7 +64,7 @@
   
     **Office**
     slmgr -skms 192.168.100.43  (替换成你自己的ipv4地址)
-    slmgr -ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J    （微软官方批量激活密钥获取）
+    slmgr -ipk FXYTK-NJJ8C-GB6DW-3DYQT-6F7TH    （微软官方批量激活密钥获取）
     slmgr /ato
     
 
