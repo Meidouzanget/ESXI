@@ -65,6 +65,8 @@ Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e32
 
 
 
+##### 参考
 
+https://www.dinghui.org/vmware-esxi-directpath-gpu.html
 
-
+https://post.smzdm.com/p/a90q6055/
