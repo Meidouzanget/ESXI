@@ -36,7 +36,32 @@ pciPassthru.64bitMMIOSizeGB=64
 
 ### Windows设置
 
+#### 首先英伟达官网，下载安装驱动
 
+#### 打开注册列表
+```
+Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e968-e325-11ce-bfc1-08002be10318}
+
+一般来说 0001 是核显，0002 是 tesla，但也可能不是，请首先确定输出卡和计算卡的正确序号。
+```
+
+#### 在 tesla 卡下面（例如 0002）：
+```
+删除：AdapterType。
+修改：FeatureScore，值从 CF 修改为 D1。（十六进制，hex）
+新增：GridLicensedFeatures，类型为 DWORD(32bit)，值为 7。（强制开启 GRID 模式）
+新增：EnableMsHybrid，类型为 DWORD(32bit)，值为 1。
+```
+
+#### 在输出卡下面（例如 0001）：
+```
+新增：EnableMsHybrid，类型为 DWORD(32bit)，值为 2。
+```
+#### 重启后打开任务管理器见到GPU && NVIDIA控制面板出现3D管理 就成功了 
+
+![image](https://user-images.githubusercontent.com/59044398/233297713-63c1f00a-ad61-4894-8f01-09a5cad64002.png)
+
+![image](https://user-images.githubusercontent.com/59044398/233297924-e53890f5-0060-4cd9-8921-9e3eba86bb3a.png)
 
 
 
