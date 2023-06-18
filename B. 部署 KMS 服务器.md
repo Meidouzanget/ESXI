@@ -59,7 +59,7 @@
 
     **Windows**
     slmgr -skms 192.168.100.169  (替换成你自己的ipv4地址，我的服务器是169)
-    slmgr -ipk 密钥（微软官方批量激活密钥获取）
+    slmgr -ipk NRG8B-VKK3Q-CXVCJ-9G2XF-6Q84J（微软官方批量激活密钥获取）
     slmgr /ato
   
     **Office**
