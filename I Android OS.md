@@ -14,11 +14,13 @@
 第三方系统
 ```
 Bliss OS
+(系统没有自带浏览器，没有代理谷歌商店上不去。尝试wget的方法，不知怎样下载浏览器安装包)
 https://blissos.org/
 ```
 容器版本
 ```
 https://github.com/budtmo/docker-android
+https://waydro.id/
 ```
 
 模拟器
