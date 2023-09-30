@@ -37,7 +37,7 @@
 
 
 #### 方法二
-to be continue
+to be continue....
 ```
 https://www.geekrar.com/install-macos-catalina-on-vmware-on-amd-systems/
 ```
