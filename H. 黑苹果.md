@@ -41,9 +41,9 @@ to be continue....
 ```
 https://www.geekrar.com/install-macos-catalina-on-vmware-on-amd-systems/
 ```
-
-
-
+****
+https://jose.scjtqs.com/mac-os/2023-09-28-1965/%E8%B6%85%E5%BE%AE-epyc-esxi7-%E6%83%85%E5%86%B5%E4%B8%8B-%E5%AE%89%E8%A3%85%E9%BB%91%E8%8B%B9%E6%9E%9C.html
+```
 
 
 
